@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        public static void menu()
+        {
+            System.Console.Write("\n1. Enter triangle dimensions \n2. Exit ");
+
+        }
+        static void Main(string[] args)
+        {
+            int side1, side2, side3;
+            while (true)
+            {
+                menu();
+                int option=0;
+                while (option<=0 ||option>2)
+                {
+                    try
+                    {
+                        option = Convert.ToInt16(Console.ReadLine());
+                    }
+                    catch (Exception e1)
+                    {
+                    }
+                }
+                if (option == 1)
+                {
+                    try
+                    {
+                        System.Console.Write("\n enter three integers");
+                        side1 = Convert.ToInt16(Console.ReadLine());
+                        side2 = Convert.ToInt16(Console.ReadLine());
+                        side3 = Convert.ToInt16(Console.ReadLine());
+                        String str = TriangleSolver.Analyze(side1, side2, side3);
+                        Console.WriteLine(str);
+                    }
+                    catch (Exception e1)
+                    {
+                    }
+                }
+                else if (option == 2)
+                {
+                    break;
+                }
+
+            }
+        }
+    }
+}
+
