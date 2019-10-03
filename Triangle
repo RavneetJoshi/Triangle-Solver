@@ -1,0 +1,139 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class TriangleSolver
+    {
+        public static String Analyze(int side1, int side2, int side3)
+        {
+            String result="";
+            if (side1 > side2 && side1 > side3)
+            {
+                if (side2 + side3 < side1)
+                {
+                    result="Triangle is not Valid";
+                        
+                }
+                else
+                {
+                    if(side1==side2 &&side1==side3)
+                    {
+                        result="Triangle is Equilateral";
+                    }
+                    else if (side1 == side2 || side1 == side3)
+                    {
+                        result = "Triangle is  isosceles";
+                    }
+                    else if (side1 != side2 && side1 == side3)
+                    {
+                        result = "Triangle is  scalene";
+                    }
+                }
+
+
+            }
+            else if (side2 > side3 && side2 > side1)
+            {
+                if (side1 + side3 < side2)
+                {
+                    result = "Triangle is not Valid";
+
+                }
+                else
+                {
+                    if (side1 == side2 && side1 == side3)
+                    {
+                        result = "Triangle is Equilateral";
+                    }
+                    else if (side1 == side2 || side1 == side3)
+                    {
+                        result = "Triangle is  isosceles";
+                    }
+                    else if (side1 != side2 && side1 == side3)
+                    {
+                        result = "Triangle is  scalene";
+                    }
+                }
+
+
+            }
+            
+            else if (side3 > side1 && side3 > side2)
+            {
+                if (side2 + side1< side3)
+                {
+                    Console.WriteLine("dd");
+                    result = "Triangle is not Valid";
+
+                }
+                else
+                {
+                    if ((side1 == side2) && (side1 == side3))
+                    {
+                        result = "Triangle is Equilateral";
+                    }
+                    else if (side1 == side2 || side1 == side3)
+                    {
+                        result = "Triangle is  isosceles";
+                    }
+                    else 
+                    {
+                        result = "Triangle is  scalene";
+                    }
+                }
+
+
+            }
+            else if (side3 == side1 && side3 == side2)
+            {
+                
+                    if ((side1 == side2) && (side1 == side3))
+                    {
+                        result = "Triangle is Equilateral";
+                    }
+                    else if (side1 == side2 || side1 == side3)
+                    {
+                        result = "Triangle is  isosceles";
+                    }
+                    else
+                    {
+                        result = "Triangle is  scalene";
+                    }
+                
+
+
+            }
+            else if (side1 == side2 || side1 == side3|| side2 == side3)
+            {
+                if (side2 + side1 < side3)
+                {
+                    Console.WriteLine("dd");
+                    result = "Triangle is not Valid";
+
+                }
+                else
+                {
+                    if ((side1 == side2) && (side1 == side3))
+                    {
+                        result = "Triangle is Equilateral";
+                    }
+                    else if (side1 == side2 || side1 == side3)
+                    {
+                        result = "Triangle is  isosceles";
+                    }
+                    else
+                    {
+                        result = "Triangle is  scalene";
+                    }
+                }
+
+
+            }
+            return (result);
+        }
+    }
+}
